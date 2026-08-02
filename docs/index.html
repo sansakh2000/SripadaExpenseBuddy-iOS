@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sripada Expense Buddy — Smart Expense Tracker for India</title>
+<style>
+  :root {
+    --violet:#6224E8; --teal:#0D9488; --gold:#F59E0B;
+    --bg:#f5f4fb; --card:#fff; --text:#1a1a2e; --muted:#6b7280; --border:#e5e7eb;
+  }
+  @media (prefers-color-scheme:dark) {
+    :root { --bg:#0f0e1a; --card:#1c1b2e; --text:#f0eeff; --muted:#9ca3af; --border:#2d2b45; }
+  }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; background:var(--bg); color:var(--text); }
+  .hero { background:linear-gradient(135deg,#30115a,#0D9488); color:#fff; text-align:center; padding:80px 24px 64px; }
+  .hero .icon { font-size:72px; margin-bottom:16px; }
+  .hero h1 { font-size:2.4rem; font-weight:900; }
+  .hero p  { font-size:1.1rem; opacity:.85; margin-top:10px; max-width:480px; margin-left:auto; margin-right:auto; }
+  .badge { display:inline-block; background:rgba(255,255,255,.18); border:1px solid rgba(255,255,255,.3);
+           padding:4px 14px; border-radius:20px; font-size:.8rem; font-weight:600; margin-top:20px; }
+  .wrap { max-width:860px; margin:0 auto; padding:0 24px; }
+  .features { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px; padding:52px 0; }
+  .feat { background:var(--card); border:1px solid var(--border); border-radius:16px; padding:22px; }
+  .feat .em { font-size:32px; margin-bottom:10px; }
+  .feat h3 { font-size:1rem; font-weight:700; margin-bottom:6px; }
+  .feat p  { font-size:.875rem; color:var(--muted); }
+  .section { padding:40px 0; border-top:1px solid var(--border); }
+  .section h2 { font-size:1.5rem; font-weight:800; color:var(--violet); margin-bottom:20px; }
+  .links { display:flex; gap:14px; flex-wrap:wrap; margin-top:16px; }
+  .links a { background:var(--violet); color:#fff; padding:10px 22px; border-radius:10px;
+             font-weight:700; text-decoration:none; font-size:.9rem; }
+  .links a.outline { background:transparent; border:2px solid var(--violet); color:var(--violet); }
+  footer { text-align:center; color:var(--muted); font-size:.82rem; padding:32px; border-top:1px solid var(--border); }
+  a { color:var(--violet); }
+</style>
+</head>
+<body>
+<div class="hero">
+  <div class="icon">📊</div>
+  <h1>Sripada Expense Buddy</h1>
+  <p>The smart, Indian-first expense tracker with voice entry, AI analytics, and complete privacy.</p>
+  <div class="badge">Coming soon to the App Store</div>
+</div>
+
+<div class="wrap">
+  <div class="features">
+    <div class="feat"><div class="em">🎙️</div><h3>Voice Entry</h3><p>Say "Spent 500 on groceries" in English or Hinglish and it's recorded instantly.</p></div>
+    <div class="feat"><div class="em">📊</div><h3>Smart Reports</h3><p>Daily, monthly, and category breakdowns with beautiful Swift Charts visualizations.</p></div>
+    <div class="feat"><div class="em">🤝</div><h3>Money Tracker</h3><p>Track who owes you and who you owe — with due dates and settlement tracking.</p></div>
+    <div class="feat"><div class="em">🔄</div><h3>Recurring &amp; EMI</h3><p>Set up monthly EMIs and bills that auto-remind you before the due date.</p></div>
+    <div class="feat"><div class="em">📥</div><h3>Export CSV / PDF</h3><p>Full transaction history exported as Excel-compatible CSV or a formatted PDF report.</p></div>
+    <div class="feat"><div class="em">🔒</div><h3>100% Private</h3><p>All data stays on your device. No cloud sync, no tracking, no ads on Pro.</p></div>
+  </div>
+
+  <div class="section">
+    <h2>Links</h2>
+    <div class="links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="https://github.com/sansakh2000/SripadaExpenseBuddy-iOS" class="outline">Source on GitHub</a>
+      <a href="mailto:sansakh2000@gmail.com" class="outline">Support</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  &copy; 2026 Sripada Expense Buddy &nbsp;·&nbsp; <a href="privacy.html">Privacy</a>
+</footer>
+</body>
+</html>

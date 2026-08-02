@@ -77,8 +77,8 @@ struct SettingsView: View {
                         Spacer()
                         Text("1.0 (1)").foregroundColor(.secondary)
                     }
-                    Link("Privacy Policy", destination: URL(string: "https://sripada.app/privacy")!)
-                    Link("Terms of Use",   destination: URL(string: "https://sripada.app/terms")!)
+                    Link("Privacy Policy", destination: URL(string: "https://sansakh2000.github.io/SripadaExpenseBuddy-iOS/privacy.html")!)
+                    Link("Support / Contact", destination: URL(string: "mailto:sansakh2000@gmail.com")!)
                 }
             }
             .navigationTitle("Settings")
