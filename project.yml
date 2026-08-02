@@ -5,15 +5,26 @@ options:
     iOS: "17.0"
   xcodeVersion: "15.0"
 
+configs:
+  Debug: debug
+  Release: release
+
 settings:
   base:
     SWIFT_VERSION: "5.9"
     MARKETING_VERSION: "1.0"
     CURRENT_PROJECT_VERSION: "1"
     PRODUCT_BUNDLE_IDENTIFIER: com.sripada.expensebuddy
-    DEVELOPMENT_TEAM: ""           # fill in your Apple Team ID
+    DEVELOPMENT_TEAM: ""
     INFOPLIST_FILE: SripadaExpenseBuddy/Info.plist
-    TARGETED_DEVICE_FAMILY: "1,2"  # iPhone + iPad
+    TARGETED_DEVICE_FAMILY: "1,2"
+    ENABLE_BITCODE: "NO"
+  configs:
+    Debug:
+      DEBUG_INFORMATION_FORMAT: dwarf
+    Release:
+      DEBUG_INFORMATION_FORMAT: dwarf-with-dsym
+      VALIDATE_PRODUCT: "YES"
 
 targets:
   SripadaExpenseBuddy:
@@ -29,8 +40,6 @@ targets:
         UILaunchStoryboardName: LaunchScreen
         UISupportedInterfaceOrientations:
           - UIInterfaceOrientationPortrait
-          - UIInterfaceOrientationLandscapeLeft
-          - UIInterfaceOrientationLandscapeRight
         UISupportedInterfaceOrientations~ipad:
           - UIInterfaceOrientationPortrait
           - UIInterfaceOrientationPortraitUpsideDown
@@ -38,12 +47,7 @@ targets:
           - UIInterfaceOrientationLandscapeRight
         NSMicrophoneUsageDescription: "Used for voice transaction entry — speak your expense and we'll record it."
         NSSpeechRecognitionUsageDescription: "Converts your spoken expense into a transaction automatically."
-        UIApplicationSceneManifest:
-          UIApplicationSupportsMultipleScenes: false
-          UISceneConfigurations:
-            UIWindowSceneSessionRoleApplication:
-              - UISceneConfigurationName: Default Configuration
-                UISceneDelegateClassName: "$(PRODUCT_MODULE_NAME).SceneDelegate"
+        ITSAppUsesNonExemptEncryption: false
     entitlements:
       path: SripadaExpenseBuddy/SripadaExpenseBuddy.entitlements
       properties:
@@ -53,3 +57,6 @@ targets:
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.sripada.expensebuddy
+      configs:
+        Release:
+          SWIFT_OPTIMIZATION_LEVEL: "-O"
